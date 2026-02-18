@@ -1,0 +1,1 @@
+export {default as AutherRouter} from './Auther.controller.js'

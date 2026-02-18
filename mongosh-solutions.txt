@@ -1,0 +1,18 @@
+1. Create an explicit collection named “books” with a validation rule to ensure that each
+document has a non-empty “title” field. (0.5 Grade)
+
+db.createCollection("Books" , {validator : {titel : {$type : 2}}} )
+{ ok: 1 }
+
+
+
+
+2. Create an implicit collection by inserting data directly into a new collection named
+
+db.Authers.insertOne({name : 'eslam' , nationalty : 'egyption'})
+
+{
+  acknowledged: true,
+  insertedId: ObjectId('6991575fac712cc1140f733f')
+}
+
