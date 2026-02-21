@@ -1,4 +1,5 @@
 import Create_Books, { BookCollection_instans } from "../../database/modules/Books_Collection/Books.js";
+import Logs_Collection from "../../database/modules/Logs_Collection/Logs.js";
 
 const collection = await BookCollection_instans()
 
@@ -30,15 +31,34 @@ export async function AddBook(req , res) {
     try {
         const result = await BookCollection_instans(req.body , 'insertOne')
         res.json({massage : result })
+        if (result) {
+            const logs = await Logs_Collection()
+            logs.insertOne({book_Id : result.insertedId , action : req.body.action , createdAt : new Date()  })
+        }
     } catch (error) {
         res.json({error })
         
     }
 }
 
+
 export async function Patch_MultiBooks(req , res) {
+    const Data = req.body
         try {
-        const result = await BookCollection_instans(req.body , 'insertMany')
+        const result = await BookCollection_instans(Data , 'insertMany')
+
+        
+        
+        if (result) {
+            const insertedIds = Object.values(result.insertedIds);
+            const logData = insertedIds.map( (id)=>({
+                    book_Id: id,
+                    action: "Borrowed",
+                    createdAt: new Date()
+                }) )
+           const logs = await Logs_Collection()
+           logs.insertMany(logData)
+        }
         res.json({massage : result })
     } catch (error) {
         res.json({error })
@@ -98,6 +118,7 @@ export async function serch_with_genre(req , res) {
         
     }
 }
+
 export async function Skip_Limit_sort(req , res) {
 
     try {
@@ -111,4 +132,95 @@ export async function Skip_Limit_sort(req , res) {
         
     }
 
+}
+
+export async function serch_year_integer(req , res) {
+    try {
+        const result = await collection.find( { year : {$type : ['int']}    } ).toArray()
+        
+        res.json({massage : result})
+    } catch (error) {
+        res.json({error})
+    }
+}
+
+export async function exclude_genres(req , res) {
+    try {
+        const result = await collection.find( { genres : {$nin : ['Science Fiction' , "Horror"]  } } ).toArray()
+        res.json({massage : result})
+    } catch (error) {
+        
+        res.json({error})
+    }
+}
+
+export async function Delete_books_befor(req , res) {
+    const Y = Number(req.query.year)
+    console.log(Y);
+    
+    try {
+        const result = await collection.deleteMany( { year : {$lt : Y} } )
+        res.json({massage : result})
+    } catch (error) {
+        res.json({error})
+        
+    }
+
+}
+// ----------------- aggregation --------------------//
+export async function Aggregation1(req , res) {
+    try {
+        const result = await collection.aggregate([
+            {$match : {year : {$gt : 2000}}},
+            {$sort : {year : -1}}
+        ]).toArray()
+        res.json({massage : result})
+    } catch (error) {
+        res.json({error})
+    }
+}
+
+export async function Aggregation2(req , res) {
+    try {
+        const result = await collection.aggregate([
+            {$match : {year : {$gt : 2000}}},
+            {$sort : {year : -1}},
+            {$project : {_id : 0 , genres : 0}}
+        ]).toArray()
+        res.json({massage : result})
+    } catch (error) {
+        res.json({error})
+    }
+}
+
+export async function Aggregation3(req , res) {
+    try {
+        const result = await collection.aggregate([
+            {$unwind : {path : "$genres" , 
+                      includeArrayIndex: "Index",
+                    preserveNullAndEmptyArrays: true
+            }}
+        ]).toArray()
+        res.json({massage : result})
+    } catch (error) {
+        res.json({error})
+    }
+}
+
+export async function Aggregation4(req , res) {
+    try {
+        const result = await collection.aggregate([
+            { $lookup: {
+            from: "Logs",
+            localField: "_id",
+            foreignField: "book_Id",
+            as: "inventoryDocs"
+         }
+            },
+
+        ]).toArray()
+        res.json({massage : result})
+    } catch (error) {
+        res.json({error})
+    }
 }

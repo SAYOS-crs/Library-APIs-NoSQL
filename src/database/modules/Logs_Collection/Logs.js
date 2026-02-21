@@ -3,7 +3,7 @@ import DataBase from "../../DB.connection.js";
 
 
 const db = DataBase()
-const Collection = async ()=>{
+const Logs_Collection = async ()=>{
    return await db.createCollection('Logs' , {
     capped: true,
     size: 1000,
@@ -11,4 +11,4 @@ const Collection = async ()=>{
 })
 } 
 
-export default Collection;
+export default Logs_Collection;

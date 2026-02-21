@@ -36,6 +36,30 @@ export default function BootStrap(app , express) {
     // order. (0.5 Grade)
     // • URL: GET /books/skip-limit
     //-------------------- && --------------------
+    //  13. Find books where the year field stored as an integer. (0.5 Grade)
+    // • URL: GET /books/year-integer
+    //-------------------- && --------------------
+    //  14. Find all books where the genres field does not include any of the genres "Horror" or
+    // "Science Fiction". (0.5 Grade)
+    // • URL: GET /books/exclude-genres
+    //-------------------- && --------------------
+    // 15. Delete all books published before 2000. (0.5 Grade)
+    // • DELETE: GET /books/before-year?year=2000
+    //-------------------- && --------------------
+    // 16. Using aggregation Functions, Filter books published after 2000 and sort them by year
+    // descending. (0.5 Grade)
+    // • URL: GET /books/aggregate1
+    //-------------------- && --------------------
+    // 17. Using aggregation functions, Find all books published after the year 2000. For each
+    // matching book, show only the title, author, and year fields. (0.5 Grade)
+    // • URL: GET /books/aggregate2
+    //-------------------- && --------------------
+    // 18. Using aggregation functions,break an array of genres into separate documents. (0.5 Grade)
+    // • URL: GET /books/aggregate3
+    //-------------------- && --------------------
+    // 19. Using aggregation functions, Join the books collection with the logs collection. (1 Grade)
+    // • URL: GET /books/aggregate4
+    //-------------------- && --------------------
     app.use('/Collection/Books' , BooksRouter)
 // -----------------------------------------------------------------------------------------------------------
 // -----------------------------------------------------------------------------------------------------------
@@ -50,6 +74,7 @@ export default function BootStrap(app , express) {
     //---------------- && -----------------------
     //7. Insert a new log into the logs collection. (0.5 Grade)
     //• URL: POST /logs
+     // note : the logs is recoreded automaticly !! with every insert
     app.use('/Collection/Logs' , LogsRouter)
 // -----------------------------------------------------------------------------------------------------------
 // -----------------------------------------------------------------------------------------------------------
