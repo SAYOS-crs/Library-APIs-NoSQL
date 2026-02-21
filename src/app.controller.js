@@ -22,6 +22,20 @@ export default function BootStrap(app , express) {
     //-------------------- && --------------------
     //8. Update the book with title “Future” change the year to be 2022. (0.5 Grade)
     //URL: PATCH/books/:title
+    //-------------------- && --------------------
+    //9. Find a Book with title “Brave New World”. (0.5 Grade)
+    // • URL: GET /books/title => /books/title?title=Brave New World
+    //-------------------- && --------------------
+    //10. Find all books published between 1990 and 2010. (0.5 Grade)
+    //• URL: GET /books/year => /books/year?from=1990&to=2010
+    //-------------------- && --------------------
+    // 11. Find books where the genre includes "Science Fiction".(0.5 Grade)
+    // • URL: /books/genre?genre=Science Fiction
+    //-------------------- && --------------------
+    //12. Skip the first two books, limit the results to the next three, sorted by year in descending
+    // order. (0.5 Grade)
+    // • URL: GET /books/skip-limit
+    //-------------------- && --------------------
     app.use('/Collection/Books' , BooksRouter)
 // -----------------------------------------------------------------------------------------------------------
 // -----------------------------------------------------------------------------------------------------------
