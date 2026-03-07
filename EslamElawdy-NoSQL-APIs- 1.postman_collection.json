@@ -1,0 +1,1800 @@
+{
+  "info": {
+    "_postman_id": "205c0e8a-fce8-4948-9df2-07768cce4348",
+    "name": "EslamElawdy-NoSQL-APIs: 1",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "47810947",
+    "_collection_link": "https://go.postman.co/collection/47810947-205c0e8a-fce8-4948-9df2-07768cce4348?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Book",
+      "item": [
+        {
+          "name": "Create book Collection",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "    {\r\n        \"title\" : \"elawdy123\",\r\n        \"auther\" : \"123\",\r\n        \"year\" : 12123233,\r\n        \"gender\" : \"mal2323e\"\r\n    }"
+            },
+            "url": {
+              "raw": "http://localhost:3000/Collection/Books",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "Collection",
+                "Books"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "index the title",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "    {\r\n        \"title\" : \"elawdy123\",\r\n        \"auther\" : \"123\",\r\n        \"year\" : 12123233,\r\n        \"gender\" : \"mal2323e\"\r\n    }"
+            },
+            "url": {
+              "raw": "http://localhost:3000/Collection/Books/index",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "Collection",
+                "Books",
+                "index"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "New Request",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "    {\r\n        \"title\" : \"elawdy123\",\r\n        \"auther\" : \"123\",\r\n        \"year\" : 12123233,\r\n        \"gender\" : \"mal2323e\"\r\n    }"
+                },
+                "url": {
+                  "raw": "http://localhost:3000/Collection/Books/index",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "Collection",
+                    "Books",
+                    "index"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "21"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"15-+khgeKyNWl8lkDETK7sMnUBltf8\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 18 Feb 2026 10:21:36 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"massage\": \"titel_1\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "add single book with record in logs",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "    {\r\n        \"title\" : \"lorem112312323\",\r\n        \"auther\" : \"lorem121231233\",\r\n        \"year\" : 1990,\r\n        \"genres\" : [\" Fiction\" , \"Dystopan\"],\r\n        \"action\" : \"returned\"\r\n    }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/Collection/Books/add",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "Collection",
+                "Books",
+                "add"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "add single book",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "    {\r\n        \"title\" : \"elawdy123\",\r\n        \"auther\" : \"123\",\r\n        \"year\" : 12123233,\r\n        \"gender\" : \"mal2323e\"\r\n    }",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3000/Collection/Books/add",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "Collection",
+                    "Books",
+                    "add"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "73"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"49-0QMJmpSEl5YdOTGuGdipB26l6Ow\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 18 Feb 2026 10:20:38 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"massage\": {\n        \"acknowledged\": true,\n        \"insertedId\": \"69959276b921b55a4786b802\"\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "add multi books with record in logs",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "[\r\n    {\r\n        \"title\" : \"alexa join\",\r\n        \"auther\" : \"mikel jordan\",\r\n        \"year\" : 1990,\r\n        \"genres\" : [\"Science Fiction\" , \"Dystopan\"]\r\n    },\r\n    {\r\n        \"title\" : \"donaled tramp\",\r\n        \"auther\" : \"joe biden\",\r\n        \"year\" : 1991,\r\n        \"genres\" : [\"Science\" , \"Dystopan\"]\r\n    },    {\r\n        \"title\" : \"male join\",\r\n        \"auther\" : \"donaled aregin\",\r\n        \"year\" : 1992,\r\n        \"genres\" : [\"Science Fiction\" , \"Dystopan\"]\r\n    },\r\n    {\r\n        \"title\" : \"billy elsayed\",\r\n        \"auther\" : \"mobarak\",\r\n        \"year\" : 1993,\r\n        \"genres\" : [\"Science\" , \"Dystopan\"]\r\n    },    {\r\n        \"title\" : \"puten\",\r\n        \"auther\" : \"mekatshov\",\r\n        \"year\" : 1999,\r\n        \"genres\" : [\"Science Fiction\" , \"Dystopan\"]\r\n    },\r\n    {\r\n        \"title\" : \"zelenisky\",\r\n        \"auther\" : \"ukrania\",\r\n        \"year\" : 2009,\r\n        \"genres\" : [\"Science\" , \"Dystopan\"]\r\n    },    {\r\n        \"title\" : \"elsisi\",\r\n        \"auther\" : \"gamal\",\r\n        \"year\" : 2010,\r\n        \"genres\" : [\"Science Fiction\" , \"Dystopan\"]\r\n    },\r\n    {\r\n        \"title\" : \"elsadate\",\r\n        \"auther\" : \"mohamed ali\",\r\n        \"year\" : 2011,\r\n        \"genres\" : [\"Science\" , \"Dystopan\"]\r\n    },    {\r\n        \"title\" : \"alexa join\",\r\n        \"auther\" : \"mikel jordan\",\r\n        \"year\" : 2008,\r\n        \"genres\" : [\"Science Fiction\" , \"Dystopan\"]\r\n    },\r\n    {\r\n        \"title\" : \"klay\",\r\n        \"auther\" : \"cs2\",\r\n        \"year\" : 2002,\r\n        \"genres\" : [\"Science\" , \"Dystopan\"]\r\n    }\r\n]",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/Collection/Books/patch",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "Collection",
+                "Books",
+                "patch"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "add multi books",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "[\r\n    {\r\n        \"title\" : \"lorem123\",\r\n        \"auther\" : \"lorem123\",\r\n        \"year\" : 123,\r\n        \"gender\" : \"male\"\r\n    },\r\n        {\r\n        \"title\" : \"lorem1234124\",\r\n        \"auther\" : \"lorem123\",\r\n        \"year\" : 123,\r\n        \"gender\" : \"male\"\r\n    },\r\n        {\r\n        \"title\" : \"123123123\",\r\n        \"auther\" : \"lorem123\",\r\n        \"year\" : 123,\r\n        \"gender\" : \"male\"\r\n    },\r\n        {\r\n        \"title\" : \"53467543\",\r\n        \"auther\" : \"lorem123\",\r\n        \"year\" : 123,\r\n        \"gender\" : \"male\"\r\n    },\r\n        {\r\n        \"title\" : \"loresdg13fm123\",\r\n        \"auther\" : \"lorem123\",\r\n        \"year\" : 123,\r\n        \"gender\" : \"male\"\r\n    }\r\n]",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3000/Collection/Books/patch",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "Collection",
+                    "Books",
+                    "patch"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "222"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"de-Tt2IOx8sF77xF1F+iFB1mg/Y9AU\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 18 Feb 2026 09:56:13 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"massage\": {\n        \"acknowledged\": true,\n        \"insertedCount\": 5,\n        \"insertedIds\": {\n            \"0\": \"69958cbd4f505f40d9c59216\",\n            \"1\": \"69958cbd4f505f40d9c59217\",\n            \"2\": \"69958cbd4f505f40d9c59218\",\n            \"3\": \"69958cbd4f505f40d9c59219\",\n            \"4\": \"69958cbd4f505f40d9c5921a\"\n        }\n    }\n}"
+            },
+            {
+              "name": "add multi books",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "[\r\n    {\r\n        \"title\" : \"lorem123\",\r\n        \"auther\" : \"lorem123\",\r\n        \"year\" : 1990,\r\n        \"genres\" : [\"Science Fiction\" , \"Dystopan\"]\r\n    },\r\n        {\r\n        \"title\" : \"lorem456\",\r\n        \"auther\" : \"lorem456\",\r\n        \"year\" : 1991,\r\n        \"genres\" : [\"Science\" , \"Dystopan\"]\r\n    },\r\n        {\r\n        \"title\" : \"lorem789\",\r\n        \"auther\" : \"lorem789\",\r\n        \"year\" : 1992,\r\n        \"genres\" : [\"Science Fiction\"]\r\n    },\r\n        {\r\n        \"title\" : \"lorem111111\",\r\n        \"auther\" : \"lorem111111\",\r\n        \"year\" : 1999,\r\n        \"genres\" : [\"usa\" , \"ssr\"]\r\n    },\r\n    {\r\n        \"title\" : \"Brave New World\",\r\n        \"auther\" : \"john weak\",\r\n        \"year\" : 2013,\r\n        \"genres\" : [  \"Dystopan\"]\r\n    },    {\r\n        \"title\" : \"Brave World\",\r\n        \"auther\" : \"baba yega\",\r\n        \"year\" : 2015,\r\n        \"genres\" : [\"Science Fiction\" , \"Dystopan\"]\r\n    }\r\n]",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3000/Collection/Books/patch",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "Collection",
+                    "Books",
+                    "patch"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "253"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"fd-CDnC4WdbAP7z+FFQ1VblbwRJYDA\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 21 Feb 2026 02:44:57 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"massage\": {\n        \"acknowledged\": true,\n        \"insertedCount\": 6,\n        \"insertedIds\": {\n            \"0\": \"69991c29c48c85ba2f91d0fa\",\n            \"1\": \"69991c29c48c85ba2f91d0fb\",\n            \"2\": \"69991c29c48c85ba2f91d0fc\",\n            \"3\": \"69991c29c48c85ba2f91d0fd\",\n            \"4\": \"69991c29c48c85ba2f91d0fe\",\n            \"5\": \"69991c29c48c85ba2f91d0ff\"\n        }\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Update year by title",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "",
+                "value": "asdasd",
+                "type": "text",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/Collection/Books/Brave New World",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "Collection",
+                "Books",
+                "Brave New World"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Update year by title",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [
+                  {
+                    "key": "",
+                    "value": "asdasd",
+                    "type": "text",
+                    "disabled": true
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3000/Collection/Books/lorem123",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "Collection",
+                    "Books",
+                    "lorem123"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "104"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"68-ANVC+CtiQ04s1BL+I9eOqlCJtl8\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 18 Feb 2026 10:17:10 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"massage\": {\n        \"acknowledged\": true,\n        \"modifiedCount\": 1,\n        \"upsertedId\": null,\n        \"upsertedCount\": 0,\n        \"matchedCount\": 1\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "serch by Title",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "    {\r\n        \"title\" : \"elawdy123\",\r\n        \"auther\" : \"123\",\r\n        \"year\" : 12123233,\r\n        \"gender\" : \"mal2323e\"\r\n    }"
+            },
+            "url": {
+              "raw": "http://localhost:3000/Collection/Books/title?title=Brave New World",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "Collection",
+                "Books",
+                "title"
+              ],
+              "query": [
+                {
+                  "key": "title",
+                  "value": "Brave New World"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "serch for Title",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "    {\r\n        \"title\" : \"elawdy123\",\r\n        \"auther\" : \"123\",\r\n        \"year\" : 12123233,\r\n        \"gender\" : \"mal2323e\"\r\n    }"
+                },
+                "url": {
+                  "raw": "http://localhost:3000/Collection/Books/title?title=Brave New World",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "Collection",
+                    "Books",
+                    "title"
+                  ],
+                  "query": [
+                    {
+                      "key": "title",
+                      "value": "Brave New World"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "131"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"83-fHi6MOe5h143yY6E/gv+8ayTbJE\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 21 Feb 2026 02:11:31 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"massage\": {\n        \"_id\": \"69991062307d61508d64a42c\",\n        \"title\": \"Brave New World\",\n        \"auther\": \"Hlex\",\n        \"year\": 1932,\n        \"gender\": [\n            \"lorem_0\",\n            \"lorem_1\"\n        ]\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "serch by year",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "",
+                "value": "asdasd",
+                "type": "text",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "http://localhost:3000/Collection/Books/year?from=1990&to=2015",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "Collection",
+                "Books",
+                "year"
+              ],
+              "query": [
+                {
+                  "key": "from",
+                  "value": "1990"
+                },
+                {
+                  "key": "to",
+                  "value": "2015"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "serch by year",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "",
+                    "value": "asdasd",
+                    "type": "text",
+                    "disabled": true
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": {
+                  "raw": "http://localhost:3000/Collection/Books/year?from=1990&to=2015",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "Collection",
+                    "Books",
+                    "year"
+                  ],
+                  "query": [
+                    {
+                      "key": "from",
+                      "value": "1990"
+                    },
+                    {
+                      "key": "to",
+                      "value": "2015"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "733"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"2dd-BpjkVXDnGSoFjdXGx0wKKgDIdVg\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 21 Feb 2026 02:56:24 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"massage\": [\n        {\n            \"_id\": \"69991c29c48c85ba2f91d0fa\",\n            \"title\": \"lorem123\",\n            \"auther\": \"lorem123\",\n            \"year\": 1990,\n            \"genres\": [\n                \"Science Fiction\",\n                \"Dystopan\"\n            ]\n        },\n        {\n            \"_id\": \"69991c29c48c85ba2f91d0fb\",\n            \"title\": \"lorem456\",\n            \"auther\": \"lorem456\",\n            \"year\": 1991,\n            \"genres\": [\n                \"Science\",\n                \"Dystopan\"\n            ]\n        },\n        {\n            \"_id\": \"69991c29c48c85ba2f91d0fc\",\n            \"title\": \"lorem789\",\n            \"auther\": \"lorem789\",\n            \"year\": 1992,\n            \"genres\": [\n                \"Science Fiction\"\n            ]\n        },\n        {\n            \"_id\": \"69991c29c48c85ba2f91d0fd\",\n            \"title\": \"lorem111111\",\n            \"auther\": \"lorem111111\",\n            \"year\": 1999,\n            \"genres\": [\n                \"usa\",\n                \"ssr\"\n            ]\n        },\n        {\n            \"_id\": \"69991c29c48c85ba2f91d0fe\",\n            \"title\": \"Brave New World\",\n            \"auther\": \"john weak\",\n            \"year\": 2013,\n            \"genres\": [\n                \"Dystopan\"\n            ]\n        },\n        {\n            \"_id\": \"69991c29c48c85ba2f91d0ff\",\n            \"title\": \"Brave World\",\n            \"auther\": \"baba yega\",\n            \"year\": 2015,\n            \"genres\": [\n                \"Science Fiction\",\n                \"Dystopan\"\n            ]\n        }\n    ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "Serch by genre",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "",
+                "value": "asdasd",
+                "type": "text",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "http://localhost:3000/Collection/Books/genre?genre=Science Fiction",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "Collection",
+                "Books",
+                "genre"
+              ],
+              "query": [
+                {
+                  "key": "genre",
+                  "value": "Science Fiction",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Serch by genre",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "",
+                    "value": "asdasd",
+                    "type": "text",
+                    "disabled": true
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": {
+                  "raw": "http://localhost:3000/Collection/Books/genre?genre=Science Fiction",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "Collection",
+                    "Books",
+                    "genre"
+                  ],
+                  "query": [
+                    {
+                      "key": "genre",
+                      "value": "Science Fiction"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "384"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"180-pr3KiHfv5wjWtAfnPrlp7ANDQTg\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 21 Feb 2026 02:55:18 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"massage\": [\n        {\n            \"_id\": \"69991c29c48c85ba2f91d0fa\",\n            \"title\": \"lorem123\",\n            \"auther\": \"lorem123\",\n            \"year\": 1990,\n            \"genres\": [\n                \"Science Fiction\",\n                \"Dystopan\"\n            ]\n        },\n        {\n            \"_id\": \"69991c29c48c85ba2f91d0fc\",\n            \"title\": \"lorem789\",\n            \"auther\": \"lorem789\",\n            \"year\": 1992,\n            \"genres\": [\n                \"Science Fiction\"\n            ]\n        },\n        {\n            \"_id\": \"69991c29c48c85ba2f91d0ff\",\n            \"title\": \"Brave World\",\n            \"auther\": \"baba yega\",\n            \"year\": 2015,\n            \"genres\": [\n                \"Science Fiction\",\n                \"Dystopan\"\n            ]\n        }\n    ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "Limite & Skip & Sorting the result",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "",
+                "value": "asdasd",
+                "type": "text",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "http://localhost:3000/Collection/Books/skip-limit",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "Collection",
+                "Books",
+                "skip-limit"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Limite & Skip & Sorting the result",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "",
+                    "value": "asdasd",
+                    "type": "text",
+                    "disabled": true
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": {
+                  "raw": "http://localhost:3000/Collection/Books/skip-limit",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "Collection",
+                    "Books",
+                    "skip-limit"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "361"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"169-gRt6nKj0RPZ+R6jTwRe3kt27fW8\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 21 Feb 2026 03:06:47 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"massage\": [\n        {\n            \"_id\": \"69991c29c48c85ba2f91d0fd\",\n            \"title\": \"lorem111111\",\n            \"auther\": \"lorem111111\",\n            \"year\": 1999,\n            \"genres\": [\n                \"usa\",\n                \"ssr\"\n            ]\n        },\n        {\n            \"_id\": \"69991c29c48c85ba2f91d0fc\",\n            \"title\": \"lorem789\",\n            \"auther\": \"lorem789\",\n            \"year\": 1992,\n            \"genres\": [\n                \"Science Fiction\"\n            ]\n        },\n        {\n            \"_id\": \"69991c29c48c85ba2f91d0fb\",\n            \"title\": \"lorem456\",\n            \"auther\": \"lorem456\",\n            \"year\": 1991,\n            \"genres\": [\n                \"Science\",\n                \"Dystopan\"\n            ]\n        }\n    ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "year-integer",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "",
+                "value": "asdasd",
+                "type": "text",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "http://localhost:3000/Collection/Books/year-integer",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "Collection",
+                "Books",
+                "year-integer"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "year-integer",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "",
+                    "value": "asdasd",
+                    "type": "text",
+                    "disabled": true
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": {
+                  "raw": "http://localhost:3000/Collection/Books/year-integer",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "Collection",
+                    "Books",
+                    "year-integer"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "853"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"355-IbxccVLN2yOghKUhPGiiK+U+LR4\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 21 Feb 2026 03:27:41 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"massage\": [\n        {\n            \"_id\": \"69991c29c48c85ba2f91d0fa\",\n            \"title\": \"lorem123\",\n            \"auther\": \"lorem123\",\n            \"year\": 1990,\n            \"genres\": [\n                \"Science Fiction\",\n                \"Dystopan\"\n            ]\n        },\n        {\n            \"_id\": \"69991c29c48c85ba2f91d0fb\",\n            \"title\": \"lorem456\",\n            \"auther\": \"lorem456\",\n            \"year\": 1991,\n            \"genres\": [\n                \"Science\",\n                \"Dystopan\"\n            ]\n        },\n        {\n            \"_id\": \"69991c29c48c85ba2f91d0fc\",\n            \"title\": \"lorem789\",\n            \"auther\": \"lorem789\",\n            \"year\": 1992,\n            \"genres\": [\n                \"Science Fiction\"\n            ]\n        },\n        {\n            \"_id\": \"69991c29c48c85ba2f91d0fd\",\n            \"title\": \"lorem111111\",\n            \"auther\": \"lorem111111\",\n            \"year\": 1999,\n            \"genres\": [\n                \"usa\",\n                \"ssr\"\n            ]\n        },\n        {\n            \"_id\": \"69991c29c48c85ba2f91d0fe\",\n            \"title\": \"Brave New World\",\n            \"auther\": \"john weak\",\n            \"year\": 2013,\n            \"genres\": [\n                \"Dystopan\"\n            ]\n        },\n        {\n            \"_id\": \"69991c29c48c85ba2f91d0ff\",\n            \"title\": \"Brave World\",\n            \"auther\": \"baba yega\",\n            \"year\": 2015,\n            \"genres\": [\n                \"Science Fiction\",\n                \"Dystopan\"\n            ]\n        },\n        {\n            \"_id\": \"69992629e20442c1684f3d13\",\n            \"title\": \"Brave New World\",\n            \"auther\": \"Hlex\",\n            \"year\": 1955,\n            \"gender\": [\n                \"lorem_0\",\n                \"lorem_1\"\n            ]\n        }\n    ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "exclude-genres",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "",
+                "value": "asdasd",
+                "type": "text",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "http://localhost:3000/Collection/Books/exclude-genres",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "Collection",
+                "Books",
+                "exclude-genres"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "exclude-genres",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "",
+                    "value": "asdasd",
+                    "type": "text",
+                    "disabled": true
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": {
+                  "raw": "http://localhost:3000/Collection/Books/exclude-genres",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "Collection",
+                    "Books",
+                    "exclude-genres"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "604"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"25c-WjM/NtuyuxYptpbkqbM2AK/ZqXc\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 21 Feb 2026 03:33:26 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"massage\": [\n        {\n            \"_id\": \"69991c29c48c85ba2f91d0fb\",\n            \"title\": \"lorem456\",\n            \"auther\": \"lorem456\",\n            \"year\": 1991,\n            \"genres\": [\n                \"Science\",\n                \"Dystopan\"\n            ]\n        },\n        {\n            \"_id\": \"69991c29c48c85ba2f91d0fd\",\n            \"title\": \"lorem111111\",\n            \"auther\": \"lorem111111\",\n            \"year\": 1999,\n            \"genres\": [\n                \"usa\",\n                \"ssr\"\n            ]\n        },\n        {\n            \"_id\": \"69991c29c48c85ba2f91d0fe\",\n            \"title\": \"Brave New World\",\n            \"auther\": \"john weak\",\n            \"year\": 2013,\n            \"genres\": [\n                \"Dystopan\"\n            ]\n        },\n        {\n            \"_id\": \"6999262128ee1740131057cc\",\n            \"title\": \"Brave New World\",\n            \"auther\": \"Hlex\",\n            \"year\": \"1932\",\n            \"gender\": [\n                \"lorem_0\",\n                \"lorem_1\"\n            ]\n        },\n        {\n            \"_id\": \"69992629e20442c1684f3d13\",\n            \"title\": \"Brave New World\",\n            \"auther\": \"Hlex\",\n            \"year\": 1955,\n            \"gender\": [\n                \"lorem_0\",\n                \"lorem_1\"\n            ]\n        }\n    ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "Delete Books by year Date",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "",
+                "value": "asdasd",
+                "type": "text",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "http://localhost:3000/Collection/Books/befor-year?year=2000",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "Collection",
+                "Books",
+                "befor-year"
+              ],
+              "query": [
+                {
+                  "key": "year",
+                  "value": "2000",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Delete Books by year Date",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "",
+                    "value": "asdasd",
+                    "type": "text",
+                    "disabled": true
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": {
+                  "raw": "http://localhost:3000/Collection/Books/befor-year?year=2000",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "Collection",
+                    "Books",
+                    "befor-year"
+                  ],
+                  "query": [
+                    {
+                      "key": "year",
+                      "value": "2000"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "50"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"32-bQuGhNy86XHoXKAvW54xaFHrCzY\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 21 Feb 2026 03:40:42 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"massage\": {\n        \"acknowledged\": true,\n        \"deletedCount\": 5\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "aggregate1",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "",
+                "value": "asdasd",
+                "type": "text",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "http://localhost:3000/Collection/Books/aggregate1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "Collection",
+                "Books",
+                "aggregate1"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "aggregate1",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "",
+                    "value": "asdasd",
+                    "type": "text",
+                    "disabled": true
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": {
+                  "raw": "http://localhost:3000/Collection/Books/aggregate1",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "Collection",
+                    "Books",
+                    "aggregate1"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "259"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"103-wPl7DRp4WWl6O3flzGXO9kV0Zkk\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 21 Feb 2026 03:48:44 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"massage\": [\n        {\n            \"_id\": \"69991c29c48c85ba2f91d0ff\",\n            \"title\": \"Brave World\",\n            \"auther\": \"baba yega\",\n            \"year\": 2015,\n            \"genres\": [\n                \"Science Fiction\",\n                \"Dystopan\"\n            ]\n        },\n        {\n            \"_id\": \"69991c29c48c85ba2f91d0fe\",\n            \"title\": \"Brave New World\",\n            \"auther\": \"john weak\",\n            \"year\": 2013,\n            \"genres\": [\n                \"Dystopan\"\n            ]\n        }\n    ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "aggregate2",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "",
+                "value": "asdasd",
+                "type": "text",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "http://localhost:3000/Collection/Books/aggregate2",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "Collection",
+                "Books",
+                "aggregate2"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "aggregate2",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "",
+                    "value": "asdasd",
+                    "type": "text",
+                    "disabled": true
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": {
+                  "raw": "http://localhost:3000/Collection/Books/aggregate2",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "Collection",
+                    "Books",
+                    "aggregate2"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "131"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"83-0eS4TMKTuyJMVlExQP2dl5LfOS8\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 21 Feb 2026 04:21:44 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"massage\": [\n        {\n            \"title\": \"Brave World\",\n            \"auther\": \"baba yega\",\n            \"year\": 2015\n        },\n        {\n            \"title\": \"Brave New World\",\n            \"auther\": \"john weak\",\n            \"year\": 2013\n        }\n    ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "aggregate3",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "",
+                "value": "asdasd",
+                "type": "text",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "http://localhost:3000/Collection/Books/aggregate3",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "Collection",
+                "Books",
+                "aggregate3"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "aggregate3",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "",
+                    "value": "asdasd",
+                    "type": "text",
+                    "disabled": true
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": {
+                  "raw": "http://localhost:3000/Collection/Books/aggregate3",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "Collection",
+                    "Books",
+                    "aggregate3"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "1582"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"62e-eLqzzEVf6IroRnMrgsor4S29tvs\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 21 Feb 2026 04:30:56 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"massage\": [\n        {\n            \"_id\": \"69991c29c48c85ba2f91d0fe\",\n            \"title\": \"Brave New World\",\n            \"auther\": \"john weak\",\n            \"year\": 2013,\n            \"genres\": \"Dystopan\",\n            \"Index\": 0\n        },\n        {\n            \"_id\": \"69991c29c48c85ba2f91d0ff\",\n            \"title\": \"Brave World\",\n            \"auther\": \"baba yega\",\n            \"year\": 2015,\n            \"genres\": \"Science Fiction\",\n            \"Index\": 0\n        },\n        {\n            \"_id\": \"69991c29c48c85ba2f91d0ff\",\n            \"title\": \"Brave World\",\n            \"auther\": \"baba yega\",\n            \"year\": 2015,\n            \"genres\": \"Dystopan\",\n            \"Index\": 1\n        },\n        {\n            \"_id\": \"699934fd39ca5e52cb6360d7\",\n            \"title\": \"lorem123\",\n            \"auther\": \"lorem123\",\n            \"year\": 1990,\n            \"genres\": \"Science Fiction\",\n            \"Index\": 0\n        },\n        {\n            \"_id\": \"699934fd39ca5e52cb6360d7\",\n            \"title\": \"lorem123\",\n            \"auther\": \"lorem123\",\n            \"year\": 1990,\n            \"genres\": \"Dystopan\",\n            \"Index\": 1\n        },\n        {\n            \"_id\": \"699934fd39ca5e52cb6360d8\",\n            \"title\": \"lorem456\",\n            \"auther\": \"lorem456\",\n            \"year\": 1991,\n            \"genres\": \"Science\",\n            \"Index\": 0\n        },\n        {\n            \"_id\": \"699934fd39ca5e52cb6360d8\",\n            \"title\": \"lorem456\",\n            \"auther\": \"lorem456\",\n            \"year\": 1991,\n            \"genres\": \"Dystopan\",\n            \"Index\": 1\n        },\n        {\n            \"_id\": \"699934fd39ca5e52cb6360d9\",\n            \"title\": \"lorem789\",\n            \"auther\": \"lorem789\",\n            \"year\": 1992,\n            \"genres\": \"Science Fiction\",\n            \"Index\": 0\n        },\n        {\n            \"_id\": \"699934fd39ca5e52cb6360da\",\n            \"title\": \"lorem111111\",\n            \"auther\": \"lorem111111\",\n            \"year\": 1999,\n            \"genres\": \"usa\",\n            \"Index\": 0\n        },\n        {\n            \"_id\": \"699934fd39ca5e52cb6360da\",\n            \"title\": \"lorem111111\",\n            \"auther\": \"lorem111111\",\n            \"year\": 1999,\n            \"genres\": \"ssr\",\n            \"Index\": 1\n        },\n        {\n            \"_id\": \"699934fd39ca5e52cb6360db\",\n            \"title\": \"Brave New World\",\n            \"auther\": \"john weak\",\n            \"year\": 2013,\n            \"genres\": \"Dystopan\",\n            \"Index\": 0\n        },\n        {\n            \"_id\": \"699934fd39ca5e52cb6360dc\",\n            \"title\": \"Brave World\",\n            \"auther\": \"baba yega\",\n            \"year\": 2015,\n            \"genres\": \"Science Fiction\",\n            \"Index\": 0\n        },\n        {\n            \"_id\": \"699934fd39ca5e52cb6360dc\",\n            \"title\": \"Brave World\",\n            \"auther\": \"baba yega\",\n            \"year\": 2015,\n            \"genres\": \"Dystopan\",\n            \"Index\": 1\n        }\n    ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "aggregate4",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "",
+                "value": "asdasd",
+                "type": "text",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "http://localhost:3000/Collection/Books/aggregate4",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "Collection",
+                "Books",
+                "aggregate4"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "aggregate4",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "",
+                    "value": "asdasd",
+                    "type": "text",
+                    "disabled": true
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": {
+                  "raw": "http://localhost:3000/Collection/Books/aggregate4",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "Collection",
+                    "Books",
+                    "aggregate4"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "2739"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"ab3-RC3bZvCobzNK4gP5fumIvx5Np/E\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 21 Feb 2026 05:42:23 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"massage\": [\n        {\n            \"_id\": \"699945a63151395cf05c7a28\",\n            \"title\": \"alexa join\",\n            \"auther\": \"mikel jordan\",\n            \"year\": 1990,\n            \"genres\": [\n                \"Science Fiction\",\n                \"Dystopan\"\n            ],\n            \"inventoryDocs\": [\n                {\n                    \"_id\": \"699945a63151395cf05c7a32\",\n                    \"book_Id\": \"699945a63151395cf05c7a28\",\n                    \"action\": \"Borrowed\",\n                    \"createdAt\": \"2026-02-21T05:41:58.178Z\"\n                }\n            ]\n        },\n        {\n            \"_id\": \"699945a63151395cf05c7a29\",\n            \"title\": \"donaled tramp\",\n            \"auther\": \"joe biden\",\n            \"year\": 1991,\n            \"genres\": [\n                \"Science\",\n                \"Dystopan\"\n            ],\n            \"inventoryDocs\": [\n                {\n                    \"_id\": \"699945a63151395cf05c7a33\",\n                    \"book_Id\": \"699945a63151395cf05c7a29\",\n                    \"action\": \"Borrowed\",\n                    \"createdAt\": \"2026-02-21T05:41:58.178Z\"\n                }\n            ]\n        },\n        {\n            \"_id\": \"699945a63151395cf05c7a2a\",\n            \"title\": \"male join\",\n            \"auther\": \"donaled aregin\",\n            \"year\": 1992,\n            \"genres\": [\n                \"Science Fiction\",\n                \"Dystopan\"\n            ],\n            \"inventoryDocs\": [\n                {\n                    \"_id\": \"699945a63151395cf05c7a34\",\n                    \"book_Id\": \"699945a63151395cf05c7a2a\",\n                    \"action\": \"Borrowed\",\n                    \"createdAt\": \"2026-02-21T05:41:58.178Z\"\n                }\n            ]\n        },\n        {\n            \"_id\": \"699945a63151395cf05c7a2b\",\n            \"title\": \"billy elsayed\",\n            \"auther\": \"mobarak\",\n            \"year\": 1993,\n            \"genres\": [\n                \"Science\",\n                \"Dystopan\"\n            ],\n            \"inventoryDocs\": [\n                {\n                    \"_id\": \"699945a63151395cf05c7a35\",\n                    \"book_Id\": \"699945a63151395cf05c7a2b\",\n                    \"action\": \"Borrowed\",\n                    \"createdAt\": \"2026-02-21T05:41:58.178Z\"\n                }\n            ]\n        },\n        {\n            \"_id\": \"699945a63151395cf05c7a2c\",\n            \"title\": \"puten\",\n            \"auther\": \"mekatshov\",\n            \"year\": 1999,\n            \"genres\": [\n                \"Science Fiction\",\n                \"Dystopan\"\n            ],\n            \"inventoryDocs\": [\n                {\n                    \"_id\": \"699945a63151395cf05c7a36\",\n                    \"book_Id\": \"699945a63151395cf05c7a2c\",\n                    \"action\": \"Borrowed\",\n                    \"createdAt\": \"2026-02-21T05:41:58.178Z\"\n                }\n            ]\n        },\n        {\n            \"_id\": \"699945a63151395cf05c7a2d\",\n            \"title\": \"zelenisky\",\n            \"auther\": \"ukrania\",\n            \"year\": 2009,\n            \"genres\": [\n                \"Science\",\n                \"Dystopan\"\n            ],\n            \"inventoryDocs\": [\n                {\n                    \"_id\": \"699945a63151395cf05c7a37\",\n                    \"book_Id\": \"699945a63151395cf05c7a2d\",\n                    \"action\": \"Borrowed\",\n                    \"createdAt\": \"2026-02-21T05:41:58.178Z\"\n                }\n            ]\n        },\n        {\n            \"_id\": \"699945a63151395cf05c7a2e\",\n            \"title\": \"elsisi\",\n            \"auther\": \"gamal\",\n            \"year\": 2010,\n            \"genres\": [\n                \"Science Fiction\",\n                \"Dystopan\"\n            ],\n            \"inventoryDocs\": [\n                {\n                    \"_id\": \"699945a63151395cf05c7a38\",\n                    \"book_Id\": \"699945a63151395cf05c7a2e\",\n                    \"action\": \"Borrowed\",\n                    \"createdAt\": \"2026-02-21T05:41:58.178Z\"\n                }\n            ]\n        },\n        {\n            \"_id\": \"699945a63151395cf05c7a2f\",\n            \"title\": \"elsadate\",\n            \"auther\": \"mohamed ali\",\n            \"year\": 2011,\n            \"genres\": [\n                \"Science\",\n                \"Dystopan\"\n            ],\n            \"inventoryDocs\": [\n                {\n                    \"_id\": \"699945a63151395cf05c7a39\",\n                    \"book_Id\": \"699945a63151395cf05c7a2f\",\n                    \"action\": \"Borrowed\",\n                    \"createdAt\": \"2026-02-21T05:41:58.178Z\"\n                }\n            ]\n        },\n        {\n            \"_id\": \"699945a63151395cf05c7a30\",\n            \"title\": \"alexa join\",\n            \"auther\": \"mikel jordan\",\n            \"year\": 2008,\n            \"genres\": [\n                \"Science Fiction\",\n                \"Dystopan\"\n            ],\n            \"inventoryDocs\": [\n                {\n                    \"_id\": \"699945a63151395cf05c7a3a\",\n                    \"book_Id\": \"699945a63151395cf05c7a30\",\n                    \"action\": \"Borrowed\",\n                    \"createdAt\": \"2026-02-21T05:41:58.178Z\"\n                }\n            ]\n        },\n        {\n            \"_id\": \"699945a63151395cf05c7a31\",\n            \"title\": \"klay\",\n            \"auther\": \"cs2\",\n            \"year\": 2002,\n            \"genres\": [\n                \"Science\",\n                \"Dystopan\"\n            ],\n            \"inventoryDocs\": [\n                {\n                    \"_id\": \"699945a63151395cf05c7a3b\",\n                    \"book_Id\": \"699945a63151395cf05c7a31\",\n                    \"action\": \"Borrowed\",\n                    \"createdAt\": \"2026-02-21T05:41:58.178Z\"\n                }\n            ]\n        }\n    ]\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Logs",
+      "item": [
+        {
+          "name": "add logs",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"book_Id\" : \"s\",\r\n    \"action\" : \"borrowed\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/Collection/Logs",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "Collection",
+                "Logs"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Auther",
+      "item": [
+        {
+          "name": "Create authors",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "",
+                "value": "asdasd",
+                "type": "text",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\":\"elawdy\",\r\n    \"nationalty\" : \"usa\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/Collection/Auther",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "Collection",
+                "Auther"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "New Request",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "",
+                    "value": "asdasd",
+                    "type": "text",
+                    "disabled": true
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"name\":\"elawdy\",\r\n    \"nationalty\" : \"usa\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3000/Collection/Auther",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "Collection",
+                    "Auther"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "73"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"49-R/WDOQnUeZeLlf9sdzOoHtRLjHY\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 21 Feb 2026 05:55:15 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"massage\": {\n        \"acknowledged\": true,\n        \"insertedId\": \"699948c311762f4fe5451768\"\n    }\n}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
